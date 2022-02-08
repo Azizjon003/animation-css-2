@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contener {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  margin: 5rem;
+  width: 40vw;
+  height: 614px;
+  border-radius: 50%;
+  /* border: 2px solid black; */
+}
+
+div {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  /* border: 1px solid black; */
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+  animation-duration: 1.5s;
+}
+
+.circle-blue {
+  top: 0;
+  background-color: blueviolet;
+  animation-name: circle-blue;
+}
+.circle-grey {
+  top: 91px;
+  right: 91px;
+  background-color: grey;
+  animation-name: circle;
+}
+.circle-pink {
+  top: 45%;
+  right: 0%;
+  background-color: pink;
+  animation-name: circle-pink;
+}
+.circle-blues {
+  right: 91px;
+  bottom: 91px;
+  background-color: blue;
+  animation-name: circle-blues;
+}
+.circle-green {
+  animation-name: circle-green;
+  background-color: green;
+  bottom: 0%;
+}
+.circle-grenns {
+  background-color: aquamarine;
+  bottom: 91px;
+  left: 91px;
+  animation-name: circle-grenns;
+}
+.circle-greys {
+  background-color: brown;
+  left: 0%;
+  animation-name: circle-greys;
+}
+.circle-orange {
+  left: 91px;
+  top: 91px;
+  animation-name: circle-orange;
+  background-color: orange;
+}
+@keyframes circle {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: scale(2) translate(-91px, 91px);
+    z-index: 10;
+  }
+}
+
+@keyframes circle-blue {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: scale(2) translate(0, 140px);
+    z-index: 9;
+    /* transform: scale(3); */
+  }
+}
+@keyframes circle-orange {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: scale(2) translate(91px, 91px);
+    z-index: 8;
+    /* transform: scale(3); */
+  }
+}
+@keyframes circle-greys {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: scale(2) translate(140px, 0);
+    z-index: 7;
+    /* transform: scale(3); */
+  }
+}
+@keyframes circle-grenns {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: scale(2) translate(91px, -91px);
+    z-index: 6;
+    /* transform: scale(3); */
+  }
+}
+@keyframes circle-green {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: scale(2) translate(0, -140px);
+    z-index: 5;
+    /* transform: scale(3); */
+  }
+}
+
+@keyframes circle-blues {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: scale(2) translate(-91px, -91px);
+    z-index: 4;
+    /* transform: scale(3); */
+  }
+}
+@keyframes circle-pink {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: scale(2) translate(-140px, 0);
+    z-index: 3;
+    /* transform: scale(3); */
+  }
+}

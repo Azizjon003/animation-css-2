@@ -94,7 +94,7 @@ div {
   }
   50% {
     transform: scale(2) translate(0, 140px);
-    z-index: 9;
+    z-index: 11;
     /* transform: scale(3); */
   }
 }

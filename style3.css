@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+  width: 100vh;
+  height: 100vh;
+  margin: 0 auto;
+}
+.menu-icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.menu-icon:hover {
+  cursor: pointer;
+}
+span {
+  width: 90px;
+  height: 10px;
+  background-color: orange;
+  border-radius: 20px;
+}
+.menu-icon:hover .icon2:hover {
+  opacity: 0;
+  animation-name: menu;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+.menu-icon:hover .icon1:hover {
+  animation-name: icon1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+.menu-icon:hover .icon3:hover {
+  animation-name: icon2;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+}
+
+@keyframes menu {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0);
+  }
+}
+
+@keyframes icon1 {
+  0%,
+  100% {
+    transform: rotate(45deg) translate(10px, 20px);
+  }
+  50% {
+    transform: rotate(45deg) translate(10px, 20px);
+  }
+}
+@keyframes icon2 {
+  0%,
+  100% {
+    transform: rotate(-45deg) translate(10px, -20px);
+  }
+  50% {
+    transform: rotate(-45deg) translate(-10px, -20px);
+  }
+}

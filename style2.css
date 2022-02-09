@@ -117,14 +117,16 @@ h3 {
   border-radius: 20px;
 }
 .pinkk:hover {
+  position: relative;
+  cursor: pointer;
 }
 .pinkk:hover::after {
+  position: absolute;
   display: inline-block;
   opacity: 0;
   overflow: hidden;
   content: "Magicsoft";
   width: 100%;
-  position: relative;
   animation-name: jafar;
   animation-duration: 2s;
 }
@@ -136,6 +138,18 @@ h3 {
   gap: 1rem;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.btn-white::after {
+  content: "👇";
+  display: inline-block;
+  overflow: hidden;
+  font-size: 40px;
+  position: absolute;
+  opacity: 0;
+  animation-name: btn-white;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 .btn-green {
   width: 100%;
@@ -159,6 +173,8 @@ h3 {
   animation-duration: 2s;
 }
 .whitee:hover {
+  display: block;
+  position: relative;
 }
 .whitee:hover::after {
   display: inline-block;
@@ -166,7 +182,7 @@ h3 {
   overflow: hidden;
   content: "🌈";
   width: 100%;
-  position: relative;
+  position: absolute;
   animation-name: jafar;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -184,6 +200,7 @@ h3 {
   animation-duration: 2s;
 }
 .grenn:hover {
+  position: relative;
 }
 .grenn:hover::after {
   display: inline-block;
@@ -191,10 +208,21 @@ h3 {
   overflow: hidden;
   content: "💯💯💯";
   width: 100%;
-  position: relative;
+  position: absolute;
   animation-name: jafar;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
+}
+@keyframes btn-white {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translateY(-80px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50px);
+  }
 }
 @keyframes rainbow {
   0% {
@@ -215,16 +243,14 @@ h3 {
   }
 }
 @keyframes jafar {
-  /* 0% {
-    opacity: 0;
-  } */
   50% {
     opacity: 1;
-    transform: translate(5px, -60px);
+    transform: translate(-150px, -60px);
   }
+  0%,
   100% {
     opacity: 1;
-    transform: translate(5px, -60px);
+    transform: translate(-150px, -30px);
   }
 }
 @keyframes button {
